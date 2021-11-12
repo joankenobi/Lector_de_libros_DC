@@ -1,4 +1,7 @@
 def counter_word(text:str):
+	miss=[":",".",";",",","'",'"']
+	for special_elem in miss:
+		text=text.replace(special_elem,"").lower()
 	text=text.split(" ")
 	counted_words={} 
 	for word in text:
@@ -10,5 +13,5 @@ def counter_word(text:str):
 			counted_words[word]=1
 	return counted_words
 
-text="joan joel josue joan"
+text="This is my text text. we're keeping this text short to keep things manageable."
 print(counter_word(text))
