@@ -18,10 +18,13 @@ def admin_dir(books_dir):
 				text= Read_book(inputfile)
 				(num_unique, counts)= word_stats(count_words_fast(text))
 				#print(str(num_unique)+ " " + str(sum(counts)))
-				stats.loc[title_num]=language, author.capitalize(), title.replace(".text",""), sum(counts), num_unique
+				stats.loc[title_num]=language, author.capitalize(), title.replace(".txt",""), sum(counts), num_unique
 				title_num += 1
 	return stats
 
-print(admin_dir(book_dir))
+tabla=admin_dir(book_dir)
+
+#print(tabla)
+#print(tabla[tabla.Language=="Ingles"])
 
 

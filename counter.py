@@ -25,5 +25,5 @@ def count_words(text:str):
 	return counted_words
 
 text="This is my text text. we're keeping this text short to keep things manageable."
-print(count_words_fast(text) is count_words(text))
+#print(count_words_fast(text) is count_words(text))
 #print(len(count_words("This comprehension check is to check for comprehension.")))
